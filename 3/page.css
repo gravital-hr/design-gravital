@@ -1,0 +1,62 @@
+/* dashboard page layout */
+#main {
+    gap: 2rem;
+    padding: 2rem;
+    background-color: var(--color-light);
+    display: grid;
+    /* 100% height - 4 times gap between rows - footer height */
+    grid-template-rows: repeat(3, calc((100vh - 2rem * 4 - 3.5rem) / 3));
+    grid-template-areas:
+        "news news focus"
+        "news news events"
+        "careers learn docs";
+}
+
+#news {
+    grid-area: news;
+}
+
+#focus {
+    grid-area: focus;
+}
+
+#events {
+    grid-area: events;
+}
+
+#careers {
+    grid-area: careers;
+}
+
+#learn {
+    grid-area: learn;
+}
+
+#docs {
+    grid-area: docs;
+}
+
+/* card styling */
+.card-body {
+    overflow-y: scroll;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.card-header h1 {
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.card-header .badge {
+    border-radius: .6rem;
+    font-size: .6rem;
+}

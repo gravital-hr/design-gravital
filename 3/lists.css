@@ -1,0 +1,78 @@
+:root {
+    --status-list-icon-size: 1.4rem;
+}
+
+/* unstyled list */
+ul.unstyled {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.split-border>li {
+    position: relative;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px dashed;
+}
+
+ul.split-border>li:last-child {
+    border: none;
+}
+
+
+/* status list */
+ul.status {
+    list-style-type: none;
+    margin-left: var(--fa-li-margin, 2.5em);
+    padding: 0;
+}
+
+ul.status>li {
+    position: relative;
+}
+
+ul.status>li::before {
+    left: calc(var(--status-list-icon-size) * -1.6);
+    position: absolute;
+    text-align: center;
+    width: var(--status-list-icon-size);
+    height: var(--status-list-icon-size);
+    line-height: var(--status-list-icon-size);
+    font-family: "tabler-icons";
+    font-size: 0.8rem;
+    color: white;
+    border-radius: 50%;
+}
+
+ul.status>li.warn::before {
+    content: "!";
+    background-color: var(--warning);
+    color: var(--dark);
+}
+
+ul.status>li.info::before {
+    /* flag */
+    content: "\eaa6";
+    background-color: var(--success);
+}
+
+ul.status>li.error::before {
+    /* bell */
+    content: "\ea35";
+    background-color: var(--danger);
+}
+
+ul.status>li.birthday::before {
+    /*cake*/
+    content: "\f00f";
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+ul.status>li.holiday::before {
+    /*beach*/
+    content: "\ef3d";
+    background-color: var(--secondary);
+    color: var(--primary);
+
+}

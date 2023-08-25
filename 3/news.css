@@ -1,0 +1,57 @@
+:root {
+    --news-img-size: 112px;
+}
+
+/* small & mobile screens */
+@media (max-width: 74em) {
+    :root {
+        --news-img-size: 64px;
+    }
+}
+
+.news {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: var(--news-img-size) 1fr;
+    padding: 0.7rem 0;
+}
+
+.news img {
+    max-width: var(--news-img-size);
+    max-height: var(--news-img-size);
+    border-radius: 1rem;
+    display: inline-block;
+}
+
+.news h1 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.news details {
+    padding-top: 1em;
+}
+
+.news .user {
+    color: var(--primary);
+}
+
+.news .user::before {
+    font-family: "tabler-icons";
+    content: "\eb4d";
+    margin-right: .2rem;
+}
+
+.news .like {
+    color: var(--body-text);
+    text-decoration: none;
+    font-size: .7rem;
+}
+
+.news .like::before {
+    font-family: "tabler-icons";
+    content: "\f67c";
+    margin-right: .2rem;
+    color: var(--danger);
+}

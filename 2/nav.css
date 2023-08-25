@@ -1,0 +1,54 @@
+/* default styling */
+.nav {
+    overflow-y: auto;
+}
+
+.nav>ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.nav li {
+    margin: 1rem 0;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--color-secondary);
+    display: flex;
+    gap: .7rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav a span {
+    flex: 1;
+}
+
+.nav a:hover {
+    color: var(--color-warn);
+}
+
+/*  states: selected, open */
+.nav li.selected a {
+    color: var(--color-warn);
+}
+
+/* style items with sub-menu */
+.nav li.sub.closed>a::after {
+    content: '+';
+}
+
+.nav li.sub>a::after {
+    content: '-';
+}
+
+.nav li.sub.closed>ul {
+    display: none;
+}
+
+/* logout */
+#logout {
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-secondary);
+}

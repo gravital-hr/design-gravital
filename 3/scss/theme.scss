@@ -1,0 +1,196 @@
+// define custom fonts
+@font-face {
+    font-family: "Varelmo Round";
+    font-display: swap;
+    src: url(VarelmoRound.ttf);
+}
+
+@font-face {
+    font-family: "Kelson";
+    font-display: swap;
+    src: url(kelson_sans_normal.ttf);
+}
+
+// -- configure bootstrap
+$prefix: '';
+$enable-dark-mode: false;
+$enable-rounded: true;
+$enable-shadows: true;
+$enable-gradients: false;
+$enable-transitions: true;
+$enable-reduced-motion: false;
+
+// fonts
+$font-family-sans-serif: Kelson, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+$font-family-brand: "Varelmo Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+$font-weight-base: 100;
+$font-size-root: calc(10px + 0.3vw);
+$small-font-size: .8rem;
+
+// define colors
+$white: #ffffff;
+$black: #212529;
+$primary: #59419a;
+$secondary: #d6c5f9;
+$success: #20bf55;
+$info: $secondary;
+$warning: #fdca40;
+$danger: #df2935;
+$light: #eeebf5;
+$dark: $black;
+
+// body & headings
+$body-color: #21252988;
+$body-bg: $light;
+$body-emphasis-color: $warning;
+$body-tertiary-bg: $light;
+
+$headings-color: $primary;
+
+// links
+$link-decoration: none;
+$link-hover-decoration: none;
+$link-hover-color: $warning;
+
+
+// navbar
+$navbar-light-color: $primary;
+$navbar-light-hover-color: $warning;
+$navbar-light-active-color: $warning;
+$navbar-light-disabled-color: $secondary;
+$navbar-light-brand-color: $primary;
+
+// card
+$card-box-shadow: 0px 3px 6px #00000029;
+$card-border-radius: 1rem;
+$card-border-width: 0;
+$card-spacer-x: 1.5rem;
+$card-spacer-y: 1.5rem;
+
+// $btn-color : $white;
+
+
+// $input-bg: $white;
+// $input-border-width: 0;
+// $input-box-shadow: 0;
+// $input-focus-box-shadow: 0;
+// $input-padding-y: 1rem;
+// $input-padding-x: 1rem;
+// $input-border-radius: .5rem;
+
+@import "bootstrap/scss/bootstrap.scss";
+
+// color scheme primary
+.bg-primary {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $secondary;
+    }
+
+    a {
+        color: white;
+    }
+
+    a:hover {
+        color: $warning;
+    }
+
+    hr {
+        border-color: white;
+    }
+
+    time: {
+        color: $warning;
+    }
+}
+
+// color scheme secondary
+.bg-secondary {
+    color: $dark;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $primary;
+    }
+
+    a:hover {
+        color: $white;
+    }
+
+    hr {
+        border-color: $primary;
+    }
+
+    time {
+        color: $primary;
+    }
+}
+
+// better <time>
+time,
+small {
+    font-size: .7rem;
+}
+
+time::before {
+    font-family: "tabler-icons";
+    content: "\ea52";
+    margin-right: .2rem;
+}
+
+
+// make card look a little bit better
+.card {}
+
+.card-header .ti {
+    font-size: 1.4rem;
+    padding: .4rem;
+    border-radius: 50%;
+}
+
+.card.bg-primary {
+    color: var(--secondary);
+}
+
+.card.bg-primary .card-header .ti,
+.card.bg-primary .card-header .badge {
+    background-color: $white;
+    color: $primary;
+}
+
+.card.bg-white .card-header {
+    background-color: $white;
+    color: $primary;
+}
+
+.card.bg-white .card-header .ti {
+    background-color: $secondary;
+}
+
+.card.bg-white .card-header .badge {
+    background-color: $primary;
+}
+
+.card.bg-secondary .card-header {
+    background-color: $secondary;
+    color: $primary;
+}
+
+.card.bg-secondary .card-header .ti,
+.card.bg-secondary .card-header .badge {
+    background-color: $white;
+    color: $primary;
+}
+
+.text-brand {
+    font-family: $font-family-brand;
+}

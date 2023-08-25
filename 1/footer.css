@@ -1,0 +1,15 @@
+#footer {
+    padding: 1rem 4rem;
+    background-color: var(--color-dark);
+    color: white;
+    align-items: center;
+}
+
+#links {
+    display: flex;
+    gap: 2rem;
+}
+
+#copyright {
+    color: var(--color-secondary);
+}

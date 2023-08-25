@@ -1,0 +1,57 @@
+.card {
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.card>header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.card>header>h1 {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.card>header .ti {
+    font-size: 1.4rem;
+    padding: .4rem;
+    color: var(--color-primary);
+    font-weight: 100;
+    border-radius: 50%;
+}
+
+/* default */
+.card[class~='![primary|secondary]'] {
+    background-color: white;
+    color: var(--color-dark);
+}
+
+.card>header .ti {
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+}
+
+/* primary  */
+.card.primary>header .ti {
+    color: var(--color-primary);
+    background-color: white;
+}
+
+/* secondary */
+.card.secondary>header .ti {
+    color: var(--color-primary);
+    background-color: white;
+}

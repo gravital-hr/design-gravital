@@ -1,0 +1,160 @@
+/* Media Sizes
+// smaller screen
+@media (max-width: 74em) {}
+// mobile
+@media (max-width: 48em) {}
+*/
+
+/* color variables */
+:root {
+    --color-primary: #59419A;
+    --color-secondary: #D6C5F9;
+    --color-light: #EEEBF5;
+    --color-dark: #212529;
+    --color-success: #20BF55;
+    --color-warn: #FDCA40;
+    --color-error: #DF2935;
+    /* 50% dark */
+    --color-text: #21252988;
+    /* component properties */
+    --feedback-radius: 5px;
+    --news-img-size: 112px;
+    --status-list-icon-size: 1.4rem;
+}
+
+@font-face {
+    font-family: 'Kelson';
+    src: url(./kelson_sans_normal.ttf);
+    /* src: url(./KelsonSans-LightBG.woff2); */
+    /* src: url(./KelsonSans-RegularBG.woff2); */
+    /* src: url(./KelsonSans-BoldBG.woff2);  */
+}
+
+/* default styling/theme */
+body,
+html {
+    color: var(--color-text);
+
+    font-size: calc(10px + 0.3vw);
+    font-family: Kelson, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif;
+}
+
+hr {
+    border: none;
+    border-bottom: 1px dashed var(--color-dark);
+    /* make sure hr is visible in flex container */
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* color scheme default */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-primary);
+}
+
+a {
+    color: var(--color-primary);
+}
+
+a:hover {
+    color: var(--color-warn);
+}
+
+time,
+small {
+    font-size: .7rem;
+}
+
+time {
+    color: var(--color-primary);
+}
+
+time::before {
+    font-family: "tabler-icons";
+    content: "\ea52";
+    margin-right: .2rem;
+}
+
+/**/
+.default {
+    background-color: white;
+    color: var(--color-text);
+}
+
+
+/* color scheme primary */
+.primary {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+.primary h1,
+.primary h2,
+.primary h3,
+.primary h4,
+.primary h5,
+.primary h6 {
+    color: var(--color-secondary);
+}
+
+.primary a {
+    color: white;
+}
+
+.primary a:hover {
+    color: var(--color-warn);
+}
+
+.primary hr {
+    border-color: white;
+}
+
+.primary time {
+    color: var(--color-warn);
+}
+
+/* color scheme secondary */
+.secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-dark);
+}
+
+.secondary h1,
+.secondary h2,
+.secondary h3,
+.secondary h4,
+.secondary h5,
+.secondary h6 {
+    color: var(--color-primary);
+}
+
+.secondary a:hover {
+    color: white;
+}
+
+.secondary hr {
+    border-color: var(--color-primary);
+}
+
+.secondary time {
+    color: var(--color-primary);
+}
+
+/* common layout elements */
+.apart {
+    display: flex;
+    justify-content: space-between;
+}
+
+.scroll {
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* да "отлепим" съдържанието от скролера */
+    padding-right: 1.2rem;
+}

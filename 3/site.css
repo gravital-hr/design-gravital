@@ -1,0 +1,56 @@
+/* --- header --- */
+#header .nav-item {
+    white-space: nowrap;
+}
+
+#header .user {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: .8rem;
+}
+
+#header .user img {
+    max-width: 2.2rem;
+    max-height: 2.2rem;
+    border-radius: 2.2rem;
+}
+
+/* --- footer --- */
+#footer a {
+    color: white;
+}
+
+#footer a:hover {
+    color: var(--warning);
+}
+
+/* --- feedback --- */
+#feedback {
+    position: fixed;
+    bottom: 20vh;
+    right: 0;
+    writing-mode: vertical-lr;
+    transform: rotate(-180deg);
+    font-size: .7rem;
+    padding: calc(2 * var(--border-radius)) var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    background-color: var(--warning);
+    box-shadow: 3px 3px 6px #00000029;
+    z-index: 1000;
+}
+
+#feedback,
+#feedback * {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* utilities */
+.apart {
+    display: flex;
+    justify-content: space-between;
+}
